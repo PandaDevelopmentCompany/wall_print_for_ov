@@ -262,22 +262,22 @@ function calculatePrice() {
     
     const squareMeters = width * height;
     let price = 0;
-    priceElement.setAttribute('data-unit', ' руб.');
-    if (squareMeters >= 3 && squareMeters < 5) {
-        price =  Math.round(squareMeters * 3500);
+    priceElement.setAttribute('data-unit', ' $ ');
+    if (squareMeters >= 30 && squareMeters < 50) {
+        price =  Math.round(squareMeters * 18);
         
-    } else if (squareMeters >= 5 && squareMeters < 10) {
-        price = Math.round(squareMeters * 3000);
-    } else if (squareMeters >= 10 && squareMeters < 20) {
-        price = Math.round(squareMeters * 3000);
-    } else if (squareMeters >= 20 && squareMeters < 30) {
-        price = Math.round(squareMeters * 3000);
+    } else if (squareMeters >= 50 && squareMeters < 100) {
+        price = Math.round(squareMeters * 17);
+    } else if (squareMeters >= 100 && squareMeters < 200) {
+        price = Math.round(squareMeters * 16);
+    } else if (squareMeters >= 200 && squareMeters < 300) {
+        price = Math.round(squareMeters * 15);
     } else if (squareMeters >= 30) {
-        price = "<span>Цена договорная</span>";
+        price = "<span>Special price</span>";
         priceElement.setAttribute('data-unit', '');
     }
     else {
-        price = '<span class="-red">Минимальный расчёт от 3м<sup><small>2</small></sup></span>';
+        price = '<span class="-red">Minimum calculation from 30 sq. ft<sup><small></small></sup></span>';
         priceElement.setAttribute('data-unit', '');
     }
 

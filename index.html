@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8" />
    
-   <title>Wall printing in Seattle, Tacoma, Everett <br>
-    DIGITAL WALL PRINTING —
-    A MODERN SOLUTION FOR ANY INTERIOR
+   <title>Wall printing in Seattle, Tacoma, Everett, Washington <br>
+DIGITAL WALL PRINTING —
+A MODERN SOLUTION FOR ANY INTERIOR
 </title>
 <meta name="robots" content="index, follow">
 <meta name="description" content="">
@@ -23,6 +23,7 @@
     <script src="js/swiper-bundle.min.js" defer></script>
     <script src="js/fancybox.umd.js" defer></script>
     <script src="js/scripts.js" defer></script>
+    <script src="js/form_for_tg.js" defer></script>
 <link rel="stylesheet" href="assets/components/ajaxform/css/default.css" type="text/css" />
 </head>
 
@@ -1456,7 +1457,7 @@
                     <p>We'll contact you!</p>
                 </div>
                 <div class="popup-content-wrap">
-                     <form action="/"  method="post"  class="frm-popup ajax_form" enctype="multipart/form-data" >
+                     <form action="#"  method="post"  class="frm-popup ajax_form" enctype="multipart/form-data" >
  <input type="hidden" id="width-img__input" name="width">
  <input type="hidden" id="height-img__input" name="height">
  <input type="hidden" id="price-img__input" name="price">
@@ -1466,7 +1467,7 @@
                                 <div class="frm-field-input field-dark">
                                     <div class="field-title">Your name</div>
                                     <div class="field-input">
-                                        <input type="text" name="name" class="form-input" placeholder="">
+                                        <input id="sendName" type="text" name="name" class="form-input" placeholder="" required>
                                     </div>
                                 </div>
                             </div>
@@ -1474,7 +1475,16 @@
                                 <div class="frm-field-input field-dark">
                                     <div class="field-title">Your phone</div>
                                     <div class="field-input">
-                                        <input type="tel" name="phone"  class="form-input" placeholder="">
+                                        <input id="sendTel" type="tel" name="phone"  class="form-input" placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm-field">
+                                <div class="frm-field-input field-dark">
+                                    <div class="field-title">Your comments</div>
+                                    <div class="field-input">
+                                        <textarea id="messageInput" cols="80" class="form-input"
+                                        rows="10"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -1483,7 +1493,7 @@
                             <div class="frm-field">
                                 <div class="frm-field-file js-field-file">
                                     <input type="file" class="js-field-input" name="file">
-                                    <button type="button" class="btn-file js-file-button" data-title="Attach a file"   >
+                                    <button id="sendButton" type="button" class="btn-file js-file-button" data-title="Attach a file"   >
                                         <span class="button-title">Attach a file</span>
                                     </button>
                                 </div>
@@ -1505,11 +1515,11 @@
                                 </button>
                             </div>
                         </div>
-                         <input type="hidden" value="https://pechatnastenah.ru/" name="ur">
+                         <!-- <input type="hidden" value="https://pechatnastenah.ru/" name="ur">
                         <input type="hidden" value="Печать на стенах принтером в Москве и области" name="pagd">
                         <div class="bezvalue_wrap"></div>
                     
-	<input type="hidden" name="af_action" value="434666a77640b5e614fc22c0a533bc75" />
+	<input type="hidden" name="af_action" value="434666a77640b5e614fc22c0a533bc75" /> -->
 </form>
 
 
@@ -1647,6 +1657,7 @@ console.log(new Date().getHours());
 <script>document.addEventListener('DOMContentLoaded', function(){ SweetAlert2.initialize({"position":"center","timer":5000,"showConfirmButton":false,"toast":false,"width":"30rem"},{"ajaxform":true,"minishop2":true,"office":true,"msoneclick":true}) })</script>
 <script src="assets/components/ajaxform/js/default.js"></script>
 <script>AjaxForm.initialize({"assetsUrl":"\/assets\/components\/ajaxform\/","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435","formSelector":"form.ajax_form","clearFieldsOnSuccess":true,"pageId":1});</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
